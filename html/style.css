@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+html {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.progress-container {
+    display: none;
+    z-index: 5;
+    color: #fff;
+    width: 30%;
+    position: fixed;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#progress-label {
+    font-size: 1.5vh;
+    line-height: 4vh;
+    color: orange; /* Changed to orange */
+    text-shadow: 1px 1px 1px black; /* Added black outline */
+    font-weight: bold;
+}
+
+#progress-percentage {
+    font-size: 1.5vh;
+    line-height: 4vh;
+    color: orange; /* Changed to orange */
+    text-shadow: 1px 1px 1px black; /* Added black outline */
+    font-weight: bold;
+}
+
+.progress-bar-container {
+    background: rgba(255, 255, 255, 0.5);
+    height: 2vh;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: pulseBorder 2s infinite;
+}
+
+@keyframes pulseBorder {
+    0% {
+        border-color: rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+#progress-bar {
+    background: linear-gradient(90deg, rgba(255, 69, 0, 0.8), rgba(255, 165, 0, 0.8));
+    width: 0%;
+    height: 100%;
+    border-radius: 15px;
+    transition: width 0.5s ease-out;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.7), 0 0 35px rgba(255, 165, 0, 0.5), 0 0 45px rgba(255, 165, 0, 0.3);
+}
+
+#progress-bar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%);
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: moveHighlight 2s infinite;
+}
+
+@keyframes moveHighlight {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    border-radius: 15px;
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#progress-bar-text {
+    position: absolute;
+    color: orange; /* Changed to orange */
+    font-size: 1.3vh;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Added black shadow */
+    z-index: 1;
+}
