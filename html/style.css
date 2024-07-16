@@ -39,7 +39,7 @@ body {
 #progress-label {
     font-size: 1.5vh;
     line-height: 4vh;
-    color: orange; /* Changed to orange */
+    color: rgb(0, 255, 255); /* Changed to orange */
     text-shadow: 1px 1px 1px black; /* Added black outline */
     font-weight: bold;
 }
@@ -47,7 +47,7 @@ body {
 #progress-percentage {
     font-size: 1.5vh;
     line-height: 4vh;
-    color: orange; /* Changed to orange */
+    color: rgb(0, 255, 255); /* Changed to orange */
     text-shadow: 1px 1px 1px black; /* Added black outline */
     font-weight: bold;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 #progress-bar {
-    background: linear-gradient(90deg, rgba(255, 69, 0, 0.8), rgba(255, 165, 0, 0.8));
+    background: linear-gradient(90deg, rgba(0, 17, 255, 0.8), rgba(0, 247, 255, 0.8));
     width: 0%;
     height: 100%;
     border-radius: 15px;
@@ -86,7 +86,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: 0 0 25px rgba(255, 69, 0, 0.7), 0 0 35px rgba(255, 165, 0, 0.5), 0 0 45px rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 25px rgba(0, 17, 255, 0.8), 0 0 35px rgba(7, 131, 189, 0.5), 0 0 45px rgba(0, 247, 255, 0.8);
 }
 
 #progress-bar::before {
@@ -141,7 +141,7 @@ body {
 
 #progress-bar-text {
     position: absolute;
-    color: orange; /* Changed to orange */
+    color: rgb(0, 255, 255); /* Changed to orange */
     font-size: 1.3vh;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Added black shadow */
