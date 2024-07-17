@@ -1,6 +1,8 @@
 # Progressbar
 
 Dependency for creating progressbars in QB-Core.
+#Installation
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/AchbwkoLHMQ/0.jpg)](https://www.youtube.com/watch?v=AchbwkoLHMQ)
 
 # Usage
 
